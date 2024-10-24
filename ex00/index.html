@@ -6,39 +6,41 @@
     <title>42Globify</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<header>
-    <h1 class="encabezado-green">My Globify</h1>
 
-    <button id="loginBtn">Iniciar Sesión</button>
-    <button id="logoutBtn">Cerrar Sesión</button>
-
-</header> 
 <body>
+    <header class="header_top">
+        <h1 class="encabezado-green">My Globify</h1>
+    
+        <button id="loginBtn">Iniciar Sesión</button>
+        <button style="display: none;" id="logoutBtn">Cerrar Sesión</button>
+    
+    </header> 
     <br></br>
     <br></br>
     <br></br>
     <div class="flow_container">
-        <div>
-            <h1>Login</h1>
-                <iframe src="./html/login.html"></iframe>
+        <div class="container_div" id="profile-section">
         </div>
-        <div>
-            <h1>Reproductor</h1>
-                <iframe src="./html/music.html"></iframe>
+        <div id="playlist-section">
+            <div>
+                <p>1</p>
+                <img></img>
+                <div>
+        
+            </div>
+        </div>container_div">
+
         </div>
-        <div>
-            <h1>Music</h1>
-                <iframe src="./html/songs.html"></iframe>
-        </div>
-    </div>
-    <footer>
-        <p>© 2020 My Globify by: 		
+    <footer class="rep_box">
+        <iframe src="./html/music.html"></iframe>
+    </footer>
+    <footer class="footer_down">
+        <p>© 2024 My Globify by: 		
         <a href = "https://42born2code.slack.com/team/U05337QNJJ3">jmartos-</a>, 
             <a href = "https://42born2code.slack.com/team/U05RBQXFK1D">juan-ant</a>&nbsp&
             <a href = "https://42born2code.slack.com/team/U06TM45JS0Z">sternero</a>
         </p>
         </footer>
-      <script src="javascript/script.js"></script>
-
+    <script src="./javascript/script.js"></script>
 </body>
 </html>

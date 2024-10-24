@@ -1,5 +1,5 @@
 const clientID = '06e111fc44f745d981f0d40b7cd6362b';
-const redirectURI = 'http://127.0.0.1:5501/Globify/ex00/index.html'; // Correct path
+const redirectURI = 'http://127.0.0.1:5501/ex00/index.html'; // Correct path
 let token = localStorage.getItem('spotifyToken');
 
 // 1. Function to redirect user to Spotify authentication page
@@ -60,8 +60,11 @@ async function displayUserProfile() {
     const profileSection = document.getElementById('profile-section');
     profileSection.innerHTML = `
       <h2>Bienvenido, ${userData.display_name}</h2>
+      <div>
+      
       <img src="${userData.images[0]?.url}" alt="Foto de perfil" width="100">
-      <p>Email: ${userData.email}</p>
+      </div>
+      </div>
     `;
     document.getElementById('loginBtn').style.display = 'none';
     document.getElementById('logoutBtn').style.display = 'block';
@@ -85,12 +88,13 @@ async function loadPlaylists() {
     console.log("Listas de reproducción:", playlists); // Debug: Verificar las listas de reproducción
 
     const playlistSection = document.getElementById('playlist-section');
-    playlistSection.innerHTML = `<h3>Mis Listas de Reproducción</h3>`;
-    playlists.items.forEach(playlist => {
+    playlistSection.innerHTML = ``;
+
+    playlists.items.forEach((playlist, index) => {
       const playlistDiv = document.createElement('div');
       playlistDiv.innerHTML = `
-        <h4>${playlist.name}</h4>
         <img src="${playlist.images[0]?.url}" width="100">
+        <h4>${index + 1} | ${playlist.name}</h4>
       `;
       playlistSection.appendChild(playlistDiv);
     });

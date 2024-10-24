@@ -5,160 +5,154 @@ html {
     color: rgb(20, 131, 24);
 }
 
+body {
+  margin: 0;
+}
+
 /* CONTAINERS */
 
 iframe {
-    border-radius: 2px;
     border-color: black;
-    border-radius: 20px;
-    background-color: rgb(42, 42, 42);
+    height: 70px;
+    width: 80vw;
+    align-self: center;
+    border: 0cap;
 }
+
+#playlist-section::-webkit-scrollbar {
+    display: none;
+}
+
+#playlist-section {
+    margin-left: 1vw;
+    grid-column: 1;
+    grid-row: 2;
+    height: 60vh;
+    width: 80vw;
+    background-color: rgb(25, 25, 26);
+    border-radius: 20px;
+    overflow:scroll;
+    align-content: center;
+}
+
+#playlist-section div{
+  margin-left: 1vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(38, 38, 38);
+  width: 78vw;
+  border-radius: 20px;
+  display: flex;
+  height: 80px;
+}
+
+#playlist-section img{
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 70px;
+  height: 70px;
+}
+
+#playlist-section div h4 {
+    padding-left: 10px;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rep_box {
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 45px;
+}
+
+#profile-section  {
+    grid-column: 15;
+    grid-row: 1;
+    font-size: 9px;
+    display: flex;
+    align-content: center;
+    margin-right: auto;
+}
+
+@media (max-width: 1150px) {
+    #profile-section{
+      grid-column: 14;
+    }
+}
+
+@media (max-width: 800px) {
+  #profile-section{
+    grid-column: 15;
+  }
+  #profile-section h2{
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #profile-section{
+    grid-column: 15; 
+  }
+  #profile-section h2{
+    display: none;
+  }
+}
+
+
+
+#profile-section div{
+  vertical-align: middle;
+  position:relative;
+  align-content: center;
+  size: auto;
+}
+
+#profile-section img {
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+#profile-section h2 {
+    align-content: center;
+    padding-right: 8px;
+    text-align: center;
+}
+
 
 .font_container {
     background-color: rgb(42, 42, 42);
     color: rgb(45, 147, 48);
 }
 
+.container_div {
+    color: rgb(45, 147, 48);
+    margin: 0.6em;
+    min-width: 50px;
+    min-height: 50px;
+}
+
 .flow_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(16, 6.2vw);
+  grid-template-rows: repeat(16, 4.4vh);
+  border-radius: 20px 0 0 20px;
+  height: 70vh;
+  background-color: rgb(42, 42, 42);
+  margin-left: 1vw;
 }
 
-.flow_container div {
-    padding: 0.6em;
-    justify-content: center;
-    text-align: center;
-    display: flow-root;
+.flow_container :hover {
+  background-color: rgb(66, 66, 66);
 }
 
-header * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  footer * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    background-color: #333;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  nav {
-    background-color: #1aa34a;
-    position: center;
-    top: 1;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 1rem;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Responsivo para dispositivos móviles */
-  @media (max-width: 430px) {
-    nav ul {
-      flex-direction: column;
-      display: none;
-    }
-    
-    nav ul.show {
-      display: block;
-    }
-  }
-  
-  main {
-    flex: 1;
-    margin-top: 80px;
-    padding: 1rem;
-  }
-  
-  #content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  button {
-    background-color: #1aa34a;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #1aa34a;
-  }
-  
-  /* Responsividad */
-  @media (max-width: 430px) {
-    nav ul {
-      flex-direction: column;
-      display: none;
-    }
-  
-    nav ul.show {
-      display: flex;
-    }
-  }
-  
-  a {
-      color: #cbcccd;
-    }
-  
-  a:hover {
-      color: #f0fc72; 
-    }
-  
-  a:visited {
-      color: #7e8047; 
-    }
-  
-  a {
-      text-decoration: none;
-    }
-  
-  .encabezado-green {
-      color: rgb(3, 172, 90);
-  }
 /* REPRODUCTOR */
   
 .player {
@@ -200,6 +194,7 @@ audio {
     border: none;
     border-radius: 50%;
     padding: 10px;
+    margin: 2px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -207,7 +202,7 @@ audio {
 .button_rep:hover {
     background-color: #1ed760; /* Verde más claro al pasar el mouse */
 }
-  
+
 .button_rep:focus {
     outline: none;
 }
@@ -248,5 +243,76 @@ ul li:hover {
 ul li.active {
     background-color: #1db954; /* La canción activa está resaltada */
     color: white;
+}
+
+/* sergio*/
+
+.header_top *, .footer_down * {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 430px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+.header_top {
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_top *{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_down {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer_down button, .header_top button {
+  background-color: #1aa34a;
+  color: white;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+.header_top button {
+  margin-right: 4vw;
+}
+
+button:hover {
+  background-color: #1aa34a;
+}
+
+.encabezado-green {
+    color: rgb(3, 172, 90);
 }
   
