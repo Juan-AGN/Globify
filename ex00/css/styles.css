@@ -1,3 +1,5 @@
+/* GENERAL */
+
 html {
     background-color: rgb(25, 25, 26);
     color: rgb(20, 131, 24);
@@ -157,3 +159,105 @@ header * {
   .encabezado-green {
       color: rgb(3, 172, 90);
   }
+/* REPRODUCTOR */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Color oscuro */
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.player {
+    background-color: #181818;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa el 100% del ancho */
+    height: 90px; /* Altura similar al reproductor de Spotify */
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #282828;
+    z-index: 1000;
+}
+  
+#current-song {
+    font-size: 16px;
+    color: #b3b3b3; /* Texto en gris */
+    margin-bottom: 15px;
+}
+  
+audio {
+    width: 100%;
+    margin-top: 15px;
+}
+  
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+button {
+    background-color: #1db954; /* Verde Spotify */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+button:hover {
+    background-color: #1ed760; /* Verde más claro al pasar el mouse */
+}
+  
+button:focus {
+    outline: none;
+}
+  
+#play-btn, #pause-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+  
+#prev-btn, #next-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+  
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+  
+ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: #b3b3b3;
+    border-bottom: 1px solid #404040; /* Divider en las canciones */
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+ul li:hover {
+    background-color: #333333;
+    color: white;
+}
+  
+ul li.active {
+    background-color: #1db954; /* La canción activa está resaltada */
+    color: white;
+}
+  
