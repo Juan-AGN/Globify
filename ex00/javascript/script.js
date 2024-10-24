@@ -1,5 +1,5 @@
 const clientID = '06e111fc44f745d981f0d40b7cd6362b';
-const redirectURI = 'http://127.0.0.1:5501/ex00/index.html'; // Correct path
+const redirectURI = 'https://globify-qh8k.vercel.app'; // Correct path
 let token = localStorage.getItem('spotifyToken');
 
 // 1. Function to redirect user to Spotify authentication page
