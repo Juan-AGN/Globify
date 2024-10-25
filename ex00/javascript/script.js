@@ -84,11 +84,15 @@ async function loadPlaylists() {
 
     playlists.items.forEach((playlist, index) => {
       const playlistDiv = document.createElement('div');
+      playlistDiv.id = `list${index + 1}`;
       playlistDiv.innerHTML = `
-        <img src="${playlist.images[0]?.url}" width="100">
+        <img src="${playlist.images[0]?.url}">
         <h4>${index + 1} | ${playlist.name}</h4>
       `;
       playlistSection.appendChild(playlistDiv);
+      playlistDiv.addEventListener('click', function() {
+        console.log(`${playlist.name} was clicked!`);
+      });
     });
   } catch (error) {
     console.error("Error al cargar las listas de reproducción:", error);
@@ -107,3 +111,4 @@ window.addEventListener('load', () => {
     loadPlaylists();
   }
 });
+
